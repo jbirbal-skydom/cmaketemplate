@@ -30,23 +30,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/jbirbal-skydom/camkeproject">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/jbirbal-skydom/cmaketemplate">
+    <img src="images/logo.png" alt="Logo">
   </a>
 
 <h3 align="center">Cmake Project</h3>
 
   <p align="center">
-    TMX is the serial control interface for the trackmaster treadmill protocol
+    General set up of CLION and why things are done. 
     <br />
-    <a href="https://github.com/jbirbal-skydom/TMX/"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jbirbal-skydom/cmaketemplate/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jbirbal-skydom/TMX/">View Demo</a>
+    <a href="https://github.com/jbirbal-skydom/cmaketemplate/">View Demo</a>
     ·
-    <a href="https://github.com/jbirbal-skydom/TMX/issues">Report Bug</a>
+    <a href="https://github.com/jbirbal-skydom/cmaketemplate/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jbirbal-skydom/TMX/issues">Request Feature</a>
+    <a href="https://github.com/jbirbal-skydom/cmaketemplate/issues">Request Feature</a>
   </p>
 </div>
 
@@ -85,7 +85,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Using the trackmaster protocol, This simple tkinter GUI can control the speed and  elevation of the treadmil.
+## Simple EXE
+
+Setting up my dev. environment and for future reference on other projects. This is a quick set-up to show what setting needs to be changed and why.
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,6 +99,7 @@ Using the trackmaster protocol, This simple tkinter GUI can control the speed an
 
 
 * [![3433C][C-iso.com]][c-url]
+* [![CMake][CMake]][CMake-url]
 <!-- * [![React][React.js]][React-url]
 * [![Python][Python.org]][Python-url]
 * [![OpenCV][opencv.org]][opencv-url]
@@ -110,97 +115,77 @@ Using the trackmaster protocol, This simple tkinter GUI can control the speed an
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-#
+# Getting Started
 
-To run program use the executable
-```
-output\main.exe
-```
+### Download
 
-# Modifications
+
+Download <a href="https://www.jetbrains.com/clion">  JetBrain Official Clion <a/>
+
+### Activate 
+- Look at the newest <a href=" 3.jetbra.in ">  Ja-netfilter activator <a/>  . Check <a href=" https://t.me/s/jetbrains_tools_cracks ">  telegram <a/>  group
+- There is a jetbra .zip at the top of the page, click download.
+- I used <a href=" ffff.ga "> ffff.ga <a/> from the telegram group
+- ![list]
+- extract it to the bin directory of IDEA, and after extracting it, ja-netfilter.jar should be in the same directory as idea64.exe.
+- ![extract] ![run]
+
+## Modifications
+- The tool chain can be set up using different:
+  - Generator : Used to create configuration files for a build system
+    - Borland
+    - MSYS
+    - MinGW
+    - NMake
+    - Unix (gmake)
+    - Watcom
+    - Ninja
+    - Visual Studio
+  - Build system: Used to generally compile and link source code
+    - Meson
+    - Ninja
+    - Make
+  - Compiler:
+    - MSVC (visual C)
+    - GCC
+    - LLVM
+  - Debugger
+    - GDB
+    - LLDB
+    
+LLVM is newer developed by Apple and reports errors better
+
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* Python 3.10 at [https://python.org](https://www.python.org/downloads/release/python-3100/)
-  ```sh
-  wget https://www.python.org/ftp/python/3.10.1/Python-3.10.1.tgz
-  ```
-    ```sh
-  tar xzf Python-3.10.1.tgz
-  ```
-    ```sh
-  cd Python-3.10.1 
-  ./configure --enable-optimizations
-  ```
-  ```sh
-  make altinstall
-  ```
+None
 
 
-
-  
 
 ### Dependencies
 
+None
 
-1. We need to install a virtual environment and dependencies
-2. Clone the repo
-   ```sh
-   git clone https://github.com/jbirbal-skydom/TMX/.git
-   ```
-3. Install virtual environment
-   ```sh
-   pip install virtualenv
-   ```
-4. To make virtual environment
-   ```sh
-   python -m venv .venv
-   ```
-5. Start VEnv
-    ```sh
-    .\.venv\Scripts\activate
-    ```
-6. Install dependencies
-    ```sh
-    python -m pip install -r requirements.txt
-    ```
+### Cross Compile
+- To-Do
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Configure the settings cmakelist file
 
-### Configure the settings JSON file
-* Initialize our annotations file
-    ```sh
-    nano setting\config.jsonc
-    ```
-* edit the Config
+Add the following to the markdown file to get the output in the correct destinations.
 
-  ```json
-  {
-	/****
-	* DATASET PATHS
-	****/
-	"writePort": "COM1",
-    "readPort": "COM2",
-	"rate": 4800,
-    "stopbits": 1,
-    "Parity": "N",
-    "bytes": 8,
-    "timeout": 0,
-    "Duplex": "full"
-      ```
+```markdown
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lib")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
+```
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Clicking the button up sends comand to increase the speed/elevation in relation to the set values respectfully. The increment are hard coded abut can be changed easily. 
+Clicking build
 
-The reference unit is the TMX 428: 
-###### ---Any units that uses the treadmaster protocol should work.--- 
-#
-####
+
 <div style="text-align: center;">
 
  ![overview]
@@ -231,7 +216,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-See the [open issues](https://github.com/jbirbal-skydom/TMX/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/jbirbal-skydom/cmaketemplate/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -269,7 +254,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Jason Birbal - skydom@zoho.com
 
-Project Link: [https://github.com/jbirbal-skydom/TMX/](https://github.com/jbirbal-skydom/TMX/)
+Project Link: [https://github.com/jbirbal-skydom/cmaketemplate/](https://github.com/jbirbal-skydom/cmaketemplate/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -278,15 +263,7 @@ Project Link: [https://github.com/jbirbal-skydom/TMX/](https://github.com/jbirba
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments and References
 
-*  https://www.medwrench.com/documents/view/11197/trackmaster-tmx-425-field-service-manual-part-1-pdf
-  
-* https://www.medwrench.com/documents/equipment/9428/trackmaster-tmx-425)
-* https://archive.org/details/manualzilla-id-5844026/page/5/mode/2up)
-* https://www.manualslib.com/manual/2566968/Trackmaster-Tmx428.html?page=5#manual
-* https://www.manualslib.com/manual/1393524/Trackmaster-Fvx325.html?page=117#manual
-* https://www.raso.name/computers/38-automation/76-trackmaster-treadmill?start=1
-* https://forum.allaboutcircuits.com/threads/trackmaster-tm400-s-treadmill-control.176610/
-* https://www.youtube.com/watch?v=z_J0RO0eSTk&t=25s
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -295,23 +272,25 @@ Project Link: [https://github.com/jbirbal-skydom/TMX/](https://github.com/jbirba
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/jbirbal-skydom/TMX.svg?style=for-the-badge
-[contributors-url]: https://github.com/jbirbal-skydom/TMX/graphs/contributors
+[contributors-url]: https://github.com/jbirbal-skydom/cmaketemplate/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/jbirbal-skydom/TMX.svg?style=for-the-badge
-[forks-url]: https://github.com/jbirbal-skydom/TMX/network/members
+[forks-url]: https://github.com/jbirbal-skydom/cmaketemplate/network/members
 [stars-shield]: https://img.shields.io/github/stars/jbirbal-skydom/TMX.svg?style=for-the-badge
-[stars-url]: https://github.com/jbirbal-skydom/TMX/stargazers
+[stars-url]: https://github.com/jbirbal-skydom/cmaketemplate/stargazers
 [issues-shield]: https://img.shields.io/github/issues/jbirbal-skydom/TMX.svg?style=for-the-badge
-[issues-url]: https://github.com/jbirbal-skydom/TMX/issues
+[issues-url]: https://github.com/jbirbal-skydom/cmaketemplate/issues
 [license-shield]: https://img.shields.io/github/license/jbirbal-skydom/TMX?style=for-the-badge
-[license-url]: https://github.com/jbirbal-skydom/TMX/blob/master/LICENSE
+[license-url]: https://github.com/jbirbal-skydom/cmaketemplate/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/app.jpg
+[product-screenshot]: images/cmake_logo_slider.png
 [overview]: images/overview.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[CMake]: https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=61DAFB
+[CMake-url]: https://cmake.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
@@ -330,3 +309,8 @@ Project Link: [https://github.com/jbirbal-skydom/TMX/](https://github.com/jbirba
 [opencv-url]: https://opencv.org/
 [C-iso.com]: https://img.shields.io/badge/-Progam-4A4A55?style=for-the-badge&logo=C
 [C-url]: https://www.iso.org/standard/74528.html
+[extract]: images/extract.png
+[list]: images/list.png
+[run]: images/run.png
+[buildfolder]: images/buildfolder.png
+[toolchain]: images/toolchain.png
