@@ -1,4 +1,5 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
 <a name="readme-top"></a>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -91,14 +92,19 @@ Setting up my dev. environment and for future reference on other projects. This 
 
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="right"> 
+
+[(back to top)](#readme-top)
+
+</div>
+
 
 
 
 ### Built With
 
 
-* [![3433C][C-iso.com]][c-url]
+* [![3433C][C-iso.com]][C-url]
 * [![CMake][CMake]][CMake-url]
 <!-- * [![React][React.js]][React-url]
 * [![Python][Python.org]][Python-url]
@@ -110,7 +116,12 @@ Setting up my dev. environment and for future reference on other projects. This 
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url] -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="right"> 
+
+[(back to top)](#readme-top)
+
+</div>
+
 
 
 
@@ -194,7 +205,12 @@ Clicking build
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="right"> 
+
+[(back to top)](#readme-top)
+
+</div>
+
 
 
 
@@ -218,7 +234,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 See the [open issues](https://github.com/jbirbal-skydom/cmaketemplate/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="right"> 
+
+[(back to top)](#readme-top)
+
+</div>
+
 
 
 
@@ -236,7 +257,12 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="right"> 
+
+[(back to top)](#readme-top)
+
+</div>
+
 
 
 
@@ -245,18 +271,30 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="right"> 
+
+[(back to top)](#readme-top) 
+
+</div>
+
+
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Jason Birbal - skydom@zoho.com
+Jason Birbal - [support@skydomsolutions.com](mailto:support@skydomsolutions.com)
+
 
 Project Link: [https://github.com/jbirbal-skydom/cmaketemplate/](https://github.com/jbirbal-skydom/cmaketemplate/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="right"> 
+
+[(back to top)](#readme-top)
+
+</div>
+
 
 
 
@@ -265,7 +303,12 @@ Project Link: [https://github.com/jbirbal-skydom/cmaketemplate/](https://github.
 
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<div align="right"> 
+
+[(back to top)](#readme-top)
+
+</div>
+
 
 
 
