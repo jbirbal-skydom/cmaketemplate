@@ -45,8 +45,7 @@ add_subdirectory(app)
 
 
 
-# Add the library CMakeDemo as a target, with the contents of src/ and include/
-# as dependencies.
+
 
 
 
@@ -60,6 +59,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/out/lib")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/out/bin")
 
 add_library(demo_library SHARED ${CMakeDemo_SRC} ${CMakeDemo_INC})
+
+# Add the library CMakeDemo as a target, with the contents of src/ and include/  as dependencies.
 target_include_directories(demo_library PRIVATE include)
 
 target_link_libraries(readerApp demo_library)
