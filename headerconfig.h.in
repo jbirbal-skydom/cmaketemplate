@@ -1,0 +1,12 @@
+//
+// Created by skydom on 3/20/2023.
+//
+
+#ifndef SIMPLECMAKE_CONFIG_H_IN_H
+#define SIMPLECMAKE_CONFIG_H_IN_H
+
+#endif //SIMPLECMAKE_CONFIG_H_IN_H
+
+#define SimpleCmake_VERSION_MAJOR @SimpleCmake_VERSION_MAJOR@
+#define SimpleCmake_VERSION_MINOR @SimpleCmake_VERSION_MINOR@
+#cmakedefine BUGGER

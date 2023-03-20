@@ -3,7 +3,11 @@ cmake_minimum_required(VERSION 3.24)
 
 
 
-project(SimpleCmake)
+project(SimpleCmake VERSION 1.0)
+
+#add a config file for versions and options
+configure_file(headerconfig.h.in headerconfig.h)
+
 
 #set language
 set(CMAKE_CXX_STANDARD 23)
@@ -32,7 +36,12 @@ add_subdirectory(include)
 add_subdirectory(app)
 
 
+#  Add Debug
+ option(BUGGER "debug and use experimental features." ON)
 
+
+
+# TODO - Add Test
 # Add the test directory. It is optional and can be disabled during with
 #   cmake -DBUILD_TESTING=OFF ..
 # To run unit tests produced here, we only need to run:
@@ -58,10 +67,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/out/run")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/out/lib")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/out/bin")
 
-add_library(demo_library SHARED ${CMakeDemo_SRC} ${CMakeDemo_INC})
+add_library(${PROJECT_NAME} SHARED ${CMakeDemo_SRC} ${CMakeDemo_INC})
 
 # Add the library CMakeDemo as a target, with the contents of src/ and include/  as dependencies.
-target_include_directories(demo_library PRIVATE include)
+target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
 
-target_link_libraries(readerApp demo_library)
+target_link_libraries(readerApp ${PROJECT_NAME})
 

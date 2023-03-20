@@ -1,7 +1,11 @@
 #include "source_file.h"
 
 #include <stdio.h>
+#include "headerconfig.h"
 
 void hello(void) {
-    printf("Hello, World!\n");
+#ifdef BUGGER
+    printf("LIB DEBUG used!\n");
+#endif
+    printf("LIB accessed \n");
 }
