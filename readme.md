@@ -178,7 +178,24 @@ None
 None
 
 ### Cross Compile
-- To-Do
+- TODO
+
+
+### Configure Clion
+
+- ToolChain
+  ![toolchain]
+
+- Build folder can be changed:
+![buildfolder]
+
+- Debug could be added as an option: 
+  - the "-D" flag is used followed by the variable name
+
+  
+* ![debug]
+
+
 
 ### Configure the settings cmakelist file
 
@@ -190,10 +207,27 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lib")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 ```
 
+- config file needs to added and built before being use:
+```cmake
+configure_file(headerconfig.h.in headerconfig.h)
+```
+- headerconfig.h.in:
+```c++
+#define SimpleCmake_VERSION_MAJOR @SimpleCmake_VERSION_MAJOR@
+#define SimpleCmake_VERSION_MINOR @SimpleCmake_VERSION_MINOR@
+#cmakedefine BUGGER
+
+```
+
+
+
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+
+### 
 Clicking build
 
 
@@ -357,3 +391,4 @@ Project Link: [https://github.com/jbirbal-skydom/cmaketemplate/](https://github.
 [run]: images/run.png
 [buildfolder]: images/buildfolder.png
 [toolchain]: images/toolchain.png
+[debug]: images/debugger_clion_setting.png

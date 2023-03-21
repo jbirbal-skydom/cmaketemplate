@@ -37,8 +37,12 @@ add_subdirectory(app)
 
 
 #  Add Debug
- option(BUGGER "debug and use experimental features." ON)
+option(BUGGER "debug and use experimental features." OFF)
 
+if (WITH_DEBUG)
+    MESSAGE(STATUS "WITH_DEBUG")
+    add_definitions(-DUSE_DEBUG)
+endif()
 
 
 # TODO - Add Test

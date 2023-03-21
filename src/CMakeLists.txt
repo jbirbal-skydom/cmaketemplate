@@ -9,6 +9,7 @@ cmake_minimum_required(VERSION 3.24)
 # file list, you know beforehand why your code isn't compiling.
 set(CMakeDemo_SRC
         source_file.cpp
+        file2.cpp
         )
 
 # Form the full path to the source files...
