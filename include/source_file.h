@@ -5,6 +5,9 @@
 #ifndef SIMPLECMAKE_SOURCE_FILE_H
 #define SIMPLECMAKE_SOURCE_FILE_H
 
-void hello(void);
+void hello();
+
 
 #endif //SIMPLECMAKE_SOURCE_FILE_H
+
+

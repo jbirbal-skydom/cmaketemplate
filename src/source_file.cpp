@@ -1,14 +1,19 @@
 #include "source_file.h"
 
-#include <stdio.h>
+#include <cstdio>
+#include "stdlib.h"
 #include "headerconfig.h"
-#include "file2.h"
+#include "echo.h"
 
-void hello(void) {
+void hello() {
 #ifdef BUGGER
     printf("LIB DEBUG used!\n");
-#endif
-    printf("LIB accessed \n");
+    char* res;
+    res = echo();
+    printf(" %s", res );
+    free(res);
 
-    echo();
+#else
+    printf("LIB accessed \n");
+#endif
 }
