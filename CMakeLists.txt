@@ -45,6 +45,7 @@ if (WITH_DEBUG)
 endif()
 
 
+
 # TODO - Add Test
 # Add the test directory. It is optional and can be disabled during with
 #   cmake -DBUILD_TESTING=OFF ..
@@ -55,6 +56,11 @@ endif()
 # In case your tests are printing to console, you can view their output to
 # stdout with:
 #   ctest -V
+# Enable testing via CTest
+
+enable_testing()
+ADD_SUBDIRECTORY(tests)
+
 
 
 
@@ -78,4 +84,5 @@ target_include_directories(${PROJECT_NAME} PRIVATE include)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
 
 target_link_libraries(readerApp ${PROJECT_NAME})
+
 

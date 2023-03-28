@@ -1,6 +1,18 @@
-#include <iostream>
+#include <cstdio>
+#include "echo.h"
+#include <cstring>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    printf("testing:");
+    char* req;
+    req = echo();
+    if (strcmp(req, "hello") == 0)
+    {
+        return 0;
+    } else
+    {
+        return 1;
+    }
+
+
 }

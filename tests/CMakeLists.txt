@@ -1,25 +1,17 @@
 cmake_minimum_required(VERSION 3.24)
-set(CMAKE_CXX_STANDARD 11)
 
-# Explicitly list the test source code and headers. The Catch header-only unit
-# test framework is stored in with the test source.
-set(CMakeDemo_TEST_SRC
-        test_cmake_demo.cpp
-        )
-set(CMakeDemo_TEST_HEADER
-        catch.h
-        )
+#route all the output libraries and binary to the proper location
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/out/run")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/out/lib")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/out/bin")
 
-PREPEND(CMakeDemo_TEST_SRC)
+add_executable(TestCMakeDemo test_cmake_demo.cpp)
+# include headers easier
+target_include_directories(TestCMakeDemo PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(TestCMakeDemo ${PROJECT_NAME})
 
-# Make an executable target that depends on the test source code we specified
-# above.
-add_executable(TestCMakeDemo ${CMakeDemo_TEST_SRC} ${CMakeDemo_TEST_HEADER})
 
-# Enable testing via CTest
-enable_testing()
+
 # Add our test as runnable via CTest
-add_test(NAME TestCMakeDemo  COMMAND TestCMakeDemo)
-
-# Link our unit tests against the library we compiled
-target_link_libraries(TestCMakeDemo CMakeDemo)
+add_test(NAME "TestCMakeDemo"  COMMAND "TestCMakeDemo" WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/out/run)
+install(TARGETS TestCMakeDemo DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/out/run)
