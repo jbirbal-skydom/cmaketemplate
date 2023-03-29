@@ -46,9 +46,8 @@ endif()
 
 
 
-# TODO - Add Test
-# Add the test directory. It is optional and can be disabled during with
-#   cmake -DBUILD_TESTING=OFF ..
+
+
 # To run unit tests produced here, we only need to run:
 #   make test
 # or

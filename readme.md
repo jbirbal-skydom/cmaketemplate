@@ -245,13 +245,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 </div>
 
+### CTest
+CTest will test the viability of accessing reading and filtering the library. Currently I have one test to show that information is getting passed into the test executable and seeing what it returns. 
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- 
+- Done
+
 <!-- 
 - [ ] Image Capture ![product-roadmap-Icap]
   - [ ] Image Process![product-roadmap-Iproc]
